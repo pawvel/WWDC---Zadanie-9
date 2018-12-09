@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 15px;
+}
+
+i {
+  cursor: pointer;
+}
+
+.line {
+  background-color: #ffffff;
+  width: 79px;
+  height: 3px;
+  margin: 20px;
+}
+
+/*#region INTRO */
+
+.intro-background {
+  height: 94vh;
+  background-image: url("/images/intro-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.intro {
+  color: #ffffff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-title {
+  font-size: 2rem;
+  font-family: "Dancing Script", cursive;
+}
+
+.intro-subtitle {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.5rem;
+}
+
+.intro-slogan {
+  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.intro-subslogan {
+  font-size: 1rem;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+}
+
+.intro-icon {
+  font-size: 1.5rem;
+  margin-top: 150px;
+}
+/*#endregion*/
+
+/*#region NAVBAR */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #ffffff;
+  line-height: 40px;
+}
+
+.logo {
+  font-family: "Dancing Script", cursive;
+  color: #838181;
+  font-size: 1.5rem;
+  text-decoration: none;
+  margin-left: 25px;
+}
+
+.navbar-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-list a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #696969;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.875rem;
+  margin-right: 50px;
+}
+
+/*#endregion*/
