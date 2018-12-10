@@ -28,7 +28,7 @@ i {
 
 .intro-background {
   height: 94vh;
-  background-image: url("/images/intro-background.jpg");
+  background-image: url("../images/intro-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -113,18 +113,6 @@ i {
 
 /*#region SECTIONS */
 
-.about,
-.work {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.about {
-  height: 100vh;
-}
-
 .section-title {
   color: #5a5957;
   font-family: "Playfair Display", serif;
@@ -140,6 +128,21 @@ i {
   text-align: center;
   color: #848282;
   width: 750px;
+}
+
+.about,
+.work,
+.text-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*#region ABOUT AND WORK */
+
+.about {
+  height: 100vh;
 }
 
 .gallery {
@@ -184,9 +187,7 @@ i {
   grid-row: 3;
 }
 
-.work-btn {
-  width: 200px;
-  height: 50px;
+.btn {
   background-color: #d07c7c;
   font-size: 1rem;
   font-family: "Raleway", sans-serif;
@@ -194,5 +195,71 @@ i {
   border: none;
   text-transform: uppercase;
   margin: 50px 0;
+  cursor: pointer;
 }
+
+.work-btn {
+  width: 200px;
+  height: 50px;
+}
+
+.work-btn:hover {
+  transform: scale(1.1);
+}
+/*#endregion*/
+
+/*#region TEXT SLIDER */
+.text-slider {
+  background-color: #ffffff;
+  height: 100vh;
+  position: relative;
+}
+
+.slide {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slide:first-child {
+  display: flex;
+}
+
+.author {
+  font-size: 0.875rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  color: #a0a0a0;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.dot-wrapper {
+  text-align: center;
+  margin-top: 40px;
+  display: flex;
+  width: 60px;
+  justify-content: space-between;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #d3d3d3;
+  display: inline-block;
+}
+
+.active,
+.dot:hover {
+  background-color: #d07c7c;
+  transform: scale(1.1);
+}
+/*#endregion*/
+
+/*#region VIDEO*/
+
+/*#endregion*/
+
 /*#endregion*/

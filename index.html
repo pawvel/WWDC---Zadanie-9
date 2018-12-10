@@ -9,8 +9,9 @@
       href="https://fonts.googleapis.com/css?family=Dancing+Script|Playfair+Display|Raleway"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="fontawesome/css/all.css" />
+    <script rel="text/javascript" src="js/script.js"></script>
   </head>
   <body>
     <div class="container">
@@ -71,8 +72,51 @@
             <a href=""><img src="images/animals.jpg" alt="lion"/></a>
           </div>
         </div>
-        <button class="work-btn">Load More</button>
+        <button class="btn work-btn">Load More</button>
       </section>
+      <section class="text-slider">
+        <div class="slide">
+          <h2 class="section-title">Proin porta arcu non pretium dapibus.</h2>
+          <hr class="line-red" />
+          <p class="section-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+            commodi voluptatum officia corporis beatae aut praesentium porro
+            itaque vero tempora possimus soluta omnis fugiat deserunt rerum,
+            repellat consequuntur in quo?
+          </p>
+          <h3 class="author">Big Lebowski CED at Unknown</h3>
+        </div>
+        <div class="slide">
+          <h2 class="section-title">
+            Vestibulum vel est et ex convallis convallis.
+          </h2>
+          <hr class="line-red" />
+          <p class="section-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+            commodi voluptatum officia corporis beatae aut praesentium porro
+            itaque vero tempora possimus soluta omnis fugiat deserunt rerum,
+            repellat consequuntur in quo?
+          </p>
+          <h3 class="author">Johny Boy CED at Unknown</h3>
+        </div>
+        <div class="slide">
+          <h2 class="section-title">Sed in enim et enim accumsan laoreet.</h2>
+          <hr class="line-red" />
+          <p class="section-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+            commodi voluptatum officia corporis beatae aut praesentium porro
+            itaque vero tempora possimus soluta omnis fugiat deserunt rerum,
+            repellat consequuntur in quo?
+          </p>
+          <h3 class="author">John Doe CED at Unknown</h3>
+        </div>
+        <div class="dot-wrapper">
+          <span class="dot active" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </section>
+      <section class="video"></section>
       <footer style="height: 2000px; background-color: blue;"></footer>
     </div>
   </body>
