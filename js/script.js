@@ -17,3 +17,9 @@ function currentSlide(n) {
   slide[slideIndex - 1].style.display = "flex";
   dot[slideIndex - 1].className += " active";
 }
+
+function hideImage() {
+  var image = document.getElementById("hide-img");
+
+  image.style.display = "none";
+}

@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  scroll-behavior: smooth;
+}
+
 .container {
   margin: 0 15px;
 }
@@ -132,11 +136,16 @@ i {
 
 .about,
 .work,
-.text-slider {
+.text-slider,
+.video {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.work {
+  padding-top: 80px;
 }
 
 /*#region ABOUT AND WORK */
@@ -152,14 +161,22 @@ i {
   grid-gap: 20px;
 }
 
+.picture {
+  position: relative;
+}
+
 .picture img {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-.picture img:hover {
+.picture:hover img {
   filter: brightness(50%);
+}
+
+.picture:hover .picture-text {
+  padding: calc(5px + 2%) calc(20px + 5%);
 }
 
 .picture:nth-child(1) {
@@ -185,6 +202,43 @@ i {
 .picture:nth-child(6) {
   grid-column: 3;
   grid-row: 3;
+}
+
+.picture-text {
+  padding: 5px 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  border: 2px solid #ffffff;
+  border-image: url("../images/corners.png") 3 3 3 3 stretch;
+  transition: all 0.5s;
+}
+
+.picture-title {
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.picture-line {
+  margin: 2px 0;
+  background-color: #ffffff;
+  border: none;
+  height: 2px;
+}
+
+.picture-subtitle {
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
+  font-weight: 300;
+  text-align: center;
+  text-transform: lowercase;
 }
 
 .btn {
@@ -259,6 +313,21 @@ i {
 /*#endregion*/
 
 /*#region VIDEO*/
+
+.video {
+  height: 100vh;
+  position: relative;
+}
+
+.video-img {
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  width: 800px;
+  height: 480px;
+  background-position: center;
+  background-image: url("../images/video-poster.jpg");
+}
 
 /*#endregion*/
 

@@ -11,7 +11,6 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="fontawesome/css/all.css" />
-    <script rel="text/javascript" src="js/script.js"></script>
   </head>
   <body>
     <div class="container">
@@ -33,13 +32,13 @@
       <nav class="navbar">
         <a href="#" class="logo">MariaAnna</a>
         <ul class="navbar-list">
-          <li><a href="#">About Me</a></li>
-          <li><a href="#">Works</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#work">Works</a></li>
           <li><a href="#">Contact Me</a></li>
           <li><a href="#">Follow Me</a></li>
         </ul>
       </nav>
-      <section class="about">
+      <section class="about" id="about">
         <h2 class="section-title">A little bit about me</h2>
         <hr class="line-red" />
         <p class="section-text">
@@ -49,27 +48,57 @@
           repellat consequuntur in quo?
         </p>
       </section>
-      <section class="work">
+      <section class="work" id="work">
         <h2 class="section-title">Works</h2>
         <hr class="line-red" />
         <div class="gallery">
           <div class="picture">
-            <a href=""><img src="images/nature.jpg" alt="nature"/></a>
+            <a href=""> <img src="images/nature.jpg" alt="nature"/></a>
+            <a href="" class="picture-text">
+              <h3 class="picture-title">Nature</h3>
+              <hr class="picture-line" />
+              <h4 class="picture-subtitle">beautiful nature</h4>
+            </a>
           </div>
           <div class="picture">
             <a href=""><img src="images/people.jpg" alt="hitch-hiker"/></a>
+            <a href="" class="picture-text">
+              <h3 class="picture-title">People</h3>
+              <hr class="picture-line" />
+              <h4 class="picture-subtitle">beautiful people</h4>
+            </a>
           </div>
           <div class="picture">
             <a href=""><img src="images/wedding.jpg" alt="flowers"/></a>
+            <a href="" class="picture-text">
+              <h3 class="picture-title">Wedding</h3>
+              <hr class="picture-line" />
+              <h4 class="picture-subtitle">beautiful weeding</h4>
+            </a>
           </div>
           <div class="picture">
             <a href=""><img src="images/architecture.jpg" alt="bridge"/></a>
+            <a href="" class="picture-text">
+              <h3 class="picture-title">Architecture</h3>
+              <hr class="picture-line" />
+              <h4 class="picture-subtitle">beautiful architecture</h4>
+            </a>
           </div>
           <div class="picture">
             <a href=""><img src="images/urban.jpg" alt="bikes"/></a>
+            <a href="" class="picture-text">
+              <h3 class="picture-title">Urban</h3>
+              <hr class="picture-line" />
+              <h4 class="picture-subtitle">beautiful urban</h4>
+            </a>
           </div>
           <div class="picture">
             <a href=""><img src="images/animals.jpg" alt="lion"/></a>
+            <a href="" class="picture-text">
+              <h3 class="picture-title">Animals</h3>
+              <hr class="picture-line" />
+              <h4 class="picture-subtitle">beautiful animals</h4>
+            </a>
           </div>
         </div>
         <button class="btn work-btn">Load More</button>
@@ -116,8 +145,22 @@
           <span class="dot" onclick="currentSlide(3)"></span>
         </div>
       </section>
-      <section class="video"></section>
+      <section class="video">
+        <span id="hide-img" class="video-img" onclick="hideImage()"></span>
+        <iframe
+          class="video-yt"
+          width="800"
+          height="480"
+          src="https://www.youtube.com/embed/82sxVK6Zg1A"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </section>
       <footer style="height: 2000px; background-color: blue;"></footer>
     </div>
+
+    <script rel="text/javascript" src="js/script.js"></script>
+    <script rel="text/javascript" src="js/jquery-3.3.1.min.js"></script>
   </body>
 </html>
