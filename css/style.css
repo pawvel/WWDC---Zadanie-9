@@ -137,14 +137,17 @@ i {
 .about,
 .work,
 .text-slider,
-.video {
+.video,
+.follow,
+.contact {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.work {
+.work,
+.contact {
   padding-top: 80px;
 }
 
@@ -327,6 +330,95 @@ i {
   height: 480px;
   background-position: center;
   background-image: url("../images/video-poster.jpg");
+}
+
+/*#endregion*/
+
+/*#region FOLLOW ME*/
+.follow {
+  height: 100vh;
+}
+
+.follow-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 500px;
+}
+
+.follow-icons i:hover {
+  border: solid 1px #d07c7c;
+  color: #ffffff;
+}
+
+.follow-icon {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #848282;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.follow-icon::before {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+/*#endregion*/
+
+/*#region CONTACT ME*/
+.contact {
+  height: 100vh;
+  background-image: url("../images/contact-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact .section-text {
+  text-align: unset;
+  margin: 0 0 50px 0;
+  width: unset;
+}
+
+.input-person,
+.input-message {
+  width: 580px;
+  height: 50px;
+  margin-top: 15px;
+  padding-left: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.input-message {
+  margin-bottom: 30px;
+  height: 140px;
+  resize: none;
+  padding: 10px;
+}
+
+.contact-btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 580px;
+  margin-bottom: 80px;
+}
+
+.contact-btn-wrapper .section-text {
+  margin: 0;
+}
+
+.send-btn {
+  width: 150px;
+  height: 50px;
+  margin: 0;
 }
 
 /*#endregion*/
