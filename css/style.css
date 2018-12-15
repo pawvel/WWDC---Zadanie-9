@@ -139,7 +139,8 @@ i {
 .text-slider,
 .video,
 .follow,
-.contact {
+.contact,
+.footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -342,33 +343,55 @@ i {
 .follow-icons {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+.follow-icons i {
+  width: 70px;
+  height: 70px;
+  margin: 20px 25px;
   position: relative;
-  width: 500px;
+  color: #848282;
+  border-radius: 50%;
 }
 
 .follow-icons i:hover {
   border: solid 1px #d07c7c;
-  color: #ffffff;
 }
 
-.follow-icon {
-  text-decoration: none;
-  font-size: 2rem;
-  color: #848282;
-  text-align: center;
-  border-radius: 50%;
-}
-
-.follow-icon::before {
+.follow-icons i::before {
   width: 56px;
   height: 56px;
+  margin: 0;
+  position: absolute;
+  left: calc(50% - 28px);
+  bottom: calc(50% - 28px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: 0.3s all ease-in;
+}
+
+.follow-icons i:hover::before {
+  color: #ffffff;
+  background-color: #d07c7c;
+}
+
+/*
+.follow-icon::before {
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: #ffffff;
+  border: solid 1px #ffffff;
 }
+
+.follow-icon:hover::before {
+  border: solid 1px #d07c7c;
+} */
 
 /*#endregion*/
 
@@ -423,4 +446,29 @@ i {
 
 /*#endregion*/
 
+/*#region FOOTER*/
+.footer i {
+  margin: 20px 0;
+  color: #848282;
+}
+
+.footer h3 {
+  font-size: 1.5rem;
+  color: #848282;
+}
+
+.footer p {
+  font-size: 1rem;
+  color: #848282;
+}
+
+.copyright {
+  margin: 20px 0;
+  color: #848282;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.25rem;
+  font-style: italic;
+}
+
+/*#endregion*/
 /*#endregion*/
