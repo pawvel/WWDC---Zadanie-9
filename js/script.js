@@ -23,3 +23,19 @@ function hideImage() {
 
   image.style.display = "none";
 }
+
+// function contactValidation() {
+//   var email = document.getElementById("contact-email").value;
+//   var name = document.getElementById("contact-name").value;
+//   var message = document.getElementById("contact-message").value;
+
+//   if (email == "" && email == null) {
+//     email.style.border = "solid 1px red";
+//   }
+//   if (name == "" && email == null) {
+//     name.style.border = "solid 1px red";
+//   }
+//   if (message == "" && email == null) {
+//     message.style.border = "solid 1px red";
+//   }
+// }
