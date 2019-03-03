@@ -25,17 +25,21 @@
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum
               accusamus molestias ab, delectus laudantium cum.
             </p>
-            <i class="intro-icon fas fa-chevron-circle-down"></i>
+            <a href="#footer"
+              ><i class="intro-icon fas fa-chevron-circle-down"></i
+            ></a>
           </div>
         </div>
       </header>
       <nav class="navbar">
         <a href="#" class="logo">MariaAnna</a>
-        <ul class="navbar-list">
+        <label for="toggle" id="label">&#9776;</label>
+        <input type="checkbox" id="toggle" />
+        <ul class="menu">
           <li><a href="#about">About Me</a></li>
           <li><a href="#work">Works</a></li>
-          <li><a href="#contact">Contact Me</a></li>
           <li><a href="#follow">Follow Me</a></li>
+          <li><a href="#contact">Contact Me</a></li>
         </ul>
       </nav>
       <section class="about" id="about">
@@ -198,15 +202,17 @@
           <button class="btn send-btn">Send</button>
         </div>
       </section>
-      <footer class="footer">
-        <i class="intro-icon fas fa-chevron-circle-up"></i>
+      <footer class="footer" id="footer">
+        <a href="#"><i class="intro-icon fas fa-chevron-circle-up"></i></a>
         <h3 class="intro-title">MariaAnna</h3>
         <p class="intro-subtitle">photography</p>
-        <p class="copyright">Made by pawvel</p>
+        <p class="copyright">
+          Copyright &copy 2014 MariaAnna | Coded as an exercise by Paweł
+          Rześnicki
+        </p>
       </footer>
     </div>
 
     <script rel="text/javascript" src="js/script.js"></script>
-    <script rel="text/javascript" src="js/jquery-3.3.1.min.js"></script>
   </body>
 </html>

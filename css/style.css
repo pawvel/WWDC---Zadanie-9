@@ -73,22 +73,11 @@ i {
 .intro-icon {
   font-size: 1.5rem;
   margin-top: 150px;
+  color: #ffffff;
 }
 /*#endregion*/
 
 /*#region NAVBAR */
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background-color: #ffffff;
-  line-height: 40px;
-  border-bottom: solid 1px #848282;
-}
 
 .logo {
   font-family: "Dancing Script", cursive;
@@ -98,20 +87,41 @@ i {
   margin-left: 25px;
 }
 
-.navbar-list {
-  list-style-type: none;
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  line-height: 40px;
+  background-color: #ffffff;
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  width: 40%;
-  margin-right: 50px;
+  border-bottom: solid 1px #848282;
 }
 
-.navbar-list li {
+#label {
+  color: #838181;
+  font-size: 32px;
+  display: none;
+  margin-right: 25px;
+}
+
+#toggle {
+  display: none;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+.menu li {
   position: relative;
 }
 
-.navbar-list a {
+.menu a {
   text-decoration: none;
   text-transform: uppercase;
   color: #696969;
@@ -119,24 +129,22 @@ i {
   font-size: 0.875rem;
 }
 
-.navbar-list a::before {
+.menu a::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 3px;
   bottom: 5px;
-  left: 0;
   background-color: #d07c7c;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out 0s;
 }
 
-.navbar-list a:hover::before {
+.menu a:hover::before {
   visibility: visible;
   transform: scaleX(1);
 }
-
 /*#endregion*/
 
 /*#region SECTIONS */
@@ -180,7 +188,7 @@ i {
 /*#region ABOUT AND WORK */
 
 .about {
-  height: 100vh;
+  height: 80vh;
 }
 
 .gallery {
@@ -426,12 +434,12 @@ i {
   background-image: url("../images/contact-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .contact .section-text {
-  text-align: unset;
+  text-align: center;
   margin-bottom: 25px;
-  width: unset;
 }
 
 .input-person,
@@ -487,7 +495,6 @@ i {
 }
 
 .footer p {
-  font-size: 1rem;
   color: #848282;
 }
 
@@ -495,10 +502,225 @@ i {
   margin: 20px 0;
   color: #848282;
   font-family: "Raleway", sans-serif;
-  font-size: 0.25rem;
-  font-style: italic;
+  font-size: 1rem;
+  text-align: center;
 }
 
 /*#endregion*/
+
+/*#endregion*/
+
+/*#region MEDIA QUERIES*/
+
+@media only screen and (max-width: 768px) {
+  .menu {
+    width: 60%;
+  }
+  /*#region INTRO */
+
+  .intro-background {
+    background-position: 10% center;
+  }
+
+  .intro-slogan {
+    width: 70%;
+  }
+
+  .intro-subslogan {
+    width: 400px;
+  }
+
+  .intro .intro-icon {
+    position: relative;
+    top: 800%;
+    margin: 0;
+  }
+  /*#endregion*/
+
+  /*#region ABOUT AND WORK */
+
+  .about {
+    height: 50vh;
+  }
+
+  .section-text {
+    width: 500px;
+  }
+
+  /*#endregion*/
+
+  /*#region TEXT SLIDER */
+  .text-slider {
+    height: 50vh;
+  }
+  /*#endregion*/
+
+  /*#region VIDEO*/
+
+  .video {
+    height: 60vh;
+  }
+
+  iframe {
+    width: 600px;
+    height: 360px;
+  }
+
+  .video-img {
+    width: 600px;
+    height: 360px;
+  }
+
+  /*#endregion*/
+
+  /*#region FOLLOW ME*/
+  .follow {
+    height: 50vh;
+  }
+  /*#endregion*/
+
+  /*#region CONTACT ME*/
+  .contact {
+    height: 80vh;
+    padding-top: 0;
+  }
+
+  .contact-btn-wrapper {
+    margin-bottom: 0px;
+  }
+
+  /*#endregion*/
+}
+
+@media only screen and (max-width: 360px) {
+  .navbar {
+    display: block;
+  }
+
+  #label {
+    display: block;
+    cursor: pointer;
+    float: right;
+  }
+
+  .menu {
+    display: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  .menu a {
+    position: relative;
+  }
+
+  .menu a::before {
+    bottom: -5px;
+  }
+
+  #toggle:checked + .menu {
+    display: block;
+  }
+
+  /*#region INTRO */
+  .intro-title {
+    font-size: 1.5rem;
+  }
+
+  .intro-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .intro-slogan {
+    font-size: 2.2rem;
+  }
+
+  .intro-subslogan {
+    width: 250px;
+  }
+
+  .intro .intro-icon {
+    top: 400%;
+  }
+  /*#endregion*/
+
+  /*#region ABOUT AND WORK */
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .section-text {
+    width: 250px;
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .work-btn {
+    width: 150px;
+    height: 40px;
+  }
+  /*#endregion*/
+
+  /*#region VIDEO*/
+  .video {
+    height: 50vh;
+  }
+
+  iframe {
+    width: 320px;
+    height: 240px;
+  }
+
+  .video-img {
+    width: 320px;
+    height: 240px;
+  }
+
+  /*#endregion*/
+
+  /*#region FOLLOW ME*/
+  .follow {
+    height: 40vh;
+  }
+
+  .follow-icons {
+    width: 100%;
+  }
+
+  .follow-icons i:hover {
+    border: medium none;
+  }
+
+  .follow-icons i::before {
+    font-size: 1.6rem;
+  }
+  /*#endregion*/
+
+  /*#region CONTACT ME*/
+  .input-person,
+  .input-message {
+    width: 300px;
+  }
+  .contact-btn-wrapper {
+    width: 90%;
+  }
+
+  .send-btn {
+    width: 100px;
+    height: 40px;
+  }
+  /*#endregion*/
+
+  /*#region FOOTER*/
+
+  .copyright {
+    font-size: 0.8rem;
+  }
+
+  /*#endregion*/
+}
 
 /*#endregion*/
